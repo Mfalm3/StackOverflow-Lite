@@ -2,6 +2,7 @@
 A platform where people can ask questions and provide answers.
 
 ## Required Features
+UI templates where:
 1. Users can create an account and log in.
 2. Users can post questions.
 3. Users can delete the questions they post.
