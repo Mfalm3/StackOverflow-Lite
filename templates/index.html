@@ -1,12 +1,169 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>StackOverflow Lite</title>
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+
+    <link rel="stylesheet" href="../static/styles.css">
 </head>
+
 <body>
-    
+    <div class="container">
+        <header id="navbar">
+            <ul style="margin: 5px 0;">
+                <li style="margin-left: 200px;">
+                    <div class="logo-holder">
+                        <a href="#" class="navlink"><span class="logo">
+                                <img src="../images/favicon.png">
+                            </span>stack<span class="bold">overflow</span> Lite</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <input type="text" class="formctrl centered" placeholder="Search...">
+                </li>
+                <li class="righter" style="padding-right: 30px;">
+                    <a href="#" class="links links-misc">Sign In</a>
+                </li>
+                <li class="righter">
+                    <button type="submit" class="buttonz buttonz-primary">Sign Up</button>
+                </li>
+
+            </ul>
+        </header>
+        <main>
+            <div class="left_column ps-sticky">
+                <ul class="left_nav">
+                    <li>
+                        <a href="" class="links">Home</a>
+                    </li>
+                    <li>
+                        <a href="" class="links">Tags</a>
+                    </li>
+                    <li>
+                        <a href="" class="links">Users</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="center_column">
+                <div class="top_bar">
+                    <ul style="display: flex;">
+                        <li style="flex: 1 auto;">
+                            <p style="margin: 0;">Top Questions</p>
+                        </li>
+                        <li class="righter" style="top: 0px;padding: 0 10px 0 0;">
+                            <a href="" class="buttonz buttonz-primary">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="question_bar">
+                    <div class="tally">
+                        <div class="vote" title="0 votes">
+                            0
+                            <div>votes</div>
+                        </div>
+                        <div class="answers" title="0 answers">
+                            0
+                            <div>answers</div>
+                        </div>
+                        <div class="views" title="2 views">
+                            2
+                            <div>views</div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="#" class="links-misc">How do I run tests against a Flask data migration?</a>
+                    </div>
+                    <div class="tstamp">
+                        <p class="info">
+                            answered 31 secs ago Scott Hunter 33k
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div class="question_bar">
+                    <div class="tally">
+                        <div class="vote" title="0 votes">
+                            0
+                            <div>votes</div>
+                        </div>
+                        <div class="answers" title="0 answers">
+                            0
+                            <div>answers</div>
+                        </div>
+                        <div class="views" title="2 views">
+                            2
+                            <div>views</div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="#" class="links-misc">Message displayed “Downloading Update…” wont go away?</a>
+                    </div>
+                    <div class="tstamp">
+                        <p class="info">
+                            asked 53 secs ago Miriam Hill
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div class="question_bar">
+                    <div class="tally">
+                        <div class="vote" title="0 votes">
+                            0
+                            <div>votes</div>
+                        </div>
+                        <div class="answers" title="1 answers">
+                            1
+                            <div>answers</div>
+                        </div>
+                        <div class="views" title="2 views">
+                            2
+                            <div>views</div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="#" class="links-misc">How to install pip in Ubuntu?</a>
+                    </div>
+                    <div class="tstamp">
+                        <p class="info">
+                            answered 3 mins ago Mike Hunter
+                        </p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="right_column">
+                <div class="ad_banner">
+                    <img src="" alt="Ad Banner">
+                </div>
+            </div>
+        </main>
+        <footer class="ps-absolute">
+            <div id="social">
+                <ul>
+                    <li>
+                        <a href="#">Pivotal Tracker</a>
+                    </li>
+                    <li>
+                        <a href="#">Github</a>
+                    </li>
+                    <li>
+                        <a href="#">Twitter</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="copyright">
+                <p>Copyright &copy;2018</p>
+            </div>
+        </footer>
+    </div>
 </body>
+
 </html>
