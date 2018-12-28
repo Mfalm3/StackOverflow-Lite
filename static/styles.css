@@ -205,17 +205,27 @@ p.info{
 }
 .answer_bar{
     display: grid;
-    grid-template-areas: "answer_body answer_info";
-    grid-template-columns: 80% 20%;
+    grid-template-areas: "mark answer_body answer_info";
+    grid-template-columns: 10% 70% 20%;
     grid-column-gap: 1px;
     grid-row-gap: 1px;
     padding-bottom: 15px; 
+}
+.marker{
+    grid-area: mark;
+    visibility: hidden;
+    
+}
+.answer_bar:hover .marker {
+    visibility: visible;
 }
 .answer_body{
     grid-area: answer_body;
     padding-left: 20px;
     font-size: 19px;
+    cursor: pointer;
 }
+
 .answer_info{
     grid-area: answer_info;
     text-align: center;
