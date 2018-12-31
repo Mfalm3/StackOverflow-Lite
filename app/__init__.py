@@ -8,3 +8,5 @@ def create_app(config="development"):
     app.register_blueprint(v1, url_prefix='/api/v1')
     app.config.from_object(app_config[config])
     app.config.from_pyfile('../instance/config.py')
+
+    return app
