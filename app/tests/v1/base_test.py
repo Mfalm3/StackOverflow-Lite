@@ -1,10 +1,12 @@
+"""Base Test Class"""
 import unittest
+
 from app import create_app
 
 class BaseTest(unittest.TestCase):
     """Test Environment setUp"""
     def setUp(self):
-        self.client = create_app('testing')
+        self.client = create_app('testing').test_client()
         self.mime_type = 'application/json'
         self.login_url = '/api/v1/signin'
         self.signup_url = '/api/v1/signup'
