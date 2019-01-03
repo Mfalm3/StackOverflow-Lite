@@ -46,12 +46,3 @@ def questions():
     return jsonify({
         "questions": quiz.view_questions()
     })
-
-
-@v1.route('/question/<int:id>', methods=['GET'])
-def view_answers():
-    """View all answers to a question endpoint."""
-
-    return jsonify({
-        "questions": quiz.view_questions()
-    })
