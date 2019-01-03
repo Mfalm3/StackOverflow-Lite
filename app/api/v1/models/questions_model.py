@@ -14,7 +14,8 @@ class QuestionModel:
         questions = self.db
         return questions
 
-    def view_answers(self):
+    def view_answers(self, id):
         """View all answers to a question."""
         answers = self.db
-        pass
+        quiz_and_answers = answers[id-1]
+        return quiz_and_answers
