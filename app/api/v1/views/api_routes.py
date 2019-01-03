@@ -76,3 +76,22 @@ def ask_question():
         "status": "success",
         "message": "Question created successfully!"
     }), 201
+
+
+@v1.route('/questions/<int:question_id>/answers', methods=['POST'])
+def post_answer(question_id):
+    """Post answer endpoint."""
+    data = request.json
+    if data == '' or data is None:
+        return jsonify({
+            "status": "error",
+            "message": "Missing field/s (question_id, answer)"
+        }), 409
+    id = data.get('user_id')
+    question_id = question_id
+    answer_body = data.get('answer_body')
+    quiz.answer(id, question_id, answer_body)
+    return jsonify({
+        "status": "success",
+        "message": "Answer posted successfully!"
+    })
