@@ -1,4 +1,5 @@
 """Questions model."""
+import datetime
 from app.db import init_quiz_db
 
 
@@ -19,3 +20,17 @@ class QuestionModel:
         answers = self.db
         quiz_and_answers = answers[id-1]
         return quiz_and_answers
+
+    def ask(self, id, question_brief, question_description):
+        """Post a question method."""
+        db = self.db
+        question_data = {
+            'question_id': len(db)+1,
+            'user_id': id,
+            'created_at': datetime.datetime.now(),
+            'updated_at': '',
+            'question_brief': question_brief,
+            'question_description': question_description,
+            'answers': []
+        }
+        return db.append(question_data)
