@@ -34,3 +34,15 @@ class QuestionModel:
             'answers': []
         }
         return db.append(question_data)
+
+    def answer(self, id, question_id, answer_body):
+        """Post answers to question."""
+        db = self.db
+        answer_data = {
+            "answer_id": len(db[question_id-1]['answers'])+1,
+            "question_id": question_id,
+            "answer_body": answer_body,
+            "user_id": id,
+            'created_at': datetime.datetime.now(),
+        }
+        return (db[question_id-1]['answers']).append(answer_data)
