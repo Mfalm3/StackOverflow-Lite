@@ -28,3 +28,4 @@ app_config = {
     'testing': TestingConfig,
     'production': ProductionConfig
 }
+key = Config.SECRET_KEY
