@@ -6,10 +6,17 @@ v1 = Blueprint("v1", __name__, url_prefix="/api/v1/")
 user = UserModel()
 
 
-@v1.route('/signin')
+@v1.route('/signin', methods=['POST'])
 def signin():
     """Auth endpoint."""
-    pass
+    data = request.json
+    if not all([data.get("email"), data.get("password")]):
+        return jsonify({
+            "status": "error",
+            "message": "Missing field(s) (email, password)"
+        }), 400
+
+    return user.auth(data.get("email"), data.get("password"))
 
 
 @v1.route('/signup', methods=['POST'])
