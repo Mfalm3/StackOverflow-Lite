@@ -2,9 +2,12 @@
 import unittest
 
 from app import create_app
+from app.db import init_test_db
+
 
 class BaseTest(unittest.TestCase):
-    """Test Environment setUp"""
+    """Test Environment setUp."""
+
     def setUp(self):
         self.client = create_app('testing').test_client()
         self.mime_type = 'application/json'
@@ -13,14 +16,14 @@ class BaseTest(unittest.TestCase):
         self.quizes_url = '/api/v1/questions'
         self.quiz_url = '/api/v1/question'
         self.answers_url = '/api/v1/question/<int:d>/answers'
-
+        self.db = init_test_db()
         self.question_data = {
             "question_brief": "Meaning of life?",
             "question_description": "Have you ever just wondered what is life?"
         }
 
         self.answer_data = {
-            "answer_body" : "Life is just Divine"
+            "answer_body": "Life is just Divine"
         }
 
         self.signup_data = {
@@ -33,9 +36,6 @@ class BaseTest(unittest.TestCase):
             "email": "newuser@company.com",
             "password": "newuserpassword"
         }
-
-
-
 
     def tearDown(self):
         self.client = create_app('testing')
