@@ -46,3 +46,9 @@ class QuestionModel:
             'created_at': datetime.datetime.now(),
         }
         return (db[question_id-1]['answers']).append(answer_data)
+
+    def delete(self, question_id):
+        """Delete a question method."""
+        db = self.db
+        del(db[question_id-1])
+        return db
