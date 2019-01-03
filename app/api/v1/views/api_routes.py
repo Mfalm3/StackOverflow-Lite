@@ -95,3 +95,13 @@ def post_answer(question_id):
         "status": "success",
         "message": "Answer posted successfully!"
     })
+
+
+@v1.route('/question/<int:question_id>', methods=['DELETE'])
+def delete_question(question_id):
+    """Delete a question endpoint."""
+    quiz.delete(question_id)
+    return jsonify({
+        "status": "success",
+        "message": "Question deleted successfully!"
+    })
