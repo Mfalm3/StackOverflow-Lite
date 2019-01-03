@@ -13,7 +13,8 @@ test_db = [{
 questions_db = [{
     'question_id': 1,
     'user_id': 1,
-    'question': 'How do you install pip in Ubuntu?',
+    'question_brief': 'How do you install pip in Ubuntu?',
+    'question_description': 'I have just installerd ubuntu. I\'m a noob and I don\'t know how to install packages on linux',
     'created_at': 'Fri 14 Dec 2018 01:41:59 AM ',
     'updated_at': '',
     'answers': [
@@ -27,7 +28,7 @@ questions_db = [{
             {
                 "answer_id": 2,
                 "question_id": 1,
-                "answer_body": "Have you tried sudo apt-get install python-pip",
+                "answer_body": "Have you tried running sudo apt-get install python-pip?",
                 "user_id": 3,
                 'created_at': 'Sat 15 Dec 2018 01:41:59 AM ',
             }

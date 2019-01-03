@@ -64,7 +64,9 @@ class UserModel(BaseModel):
                     if user and check_password_hash(user['password'], password):
                         data = {
                             "username": name,
-                            "exp": datetime.datetime.utcnow() + datetime.timedelta(minutes=30)
+                            "sub": name,
+                            "iat": datetime.datetime.utcnow(),
+                            "exp": datetime.datetime.utcnow() + datetime.timedelta(seconds=15)
                         }
                         token = jwt.encode(data, key, algorithm='HS256')
 
@@ -76,10 +78,10 @@ class UserModel(BaseModel):
                             }), 201
 
                         else:
-                            return make_response(jsonify({
+                            return jsonify({
                                 "status": "error",
                                 "message": "Password is incorrect. Please try again."
-                            }), 400)
+                            }), 400
                     else:
                         return jsonify({
                             "message": "could not find user/password not incorrect"
