@@ -6,6 +6,7 @@ Click==7.0
 coverage==4.5.2
 Flask==1.0.2
 Flask-Bcrypt==0.7.1
+Flask-JWT==0.3.2
 itsdangerous==1.1.0
 Jinja2==2.10
 MarkupSafe==1.1.0
@@ -14,6 +15,7 @@ pathlib2==2.3.3
 pluggy==0.8.0
 py==1.7.0
 pycparser==2.19
+PyJWT==1.4.2
 pytest==4.0.2
 six==1.12.0
 Werkzeug==0.14.1
