@@ -1,5 +1,5 @@
 atomicwrites==1.2.1
-attrs==18.2.0
+attrs==21.1.0
 bcrypt==3.1.5
 cffi==1.11.5
 Click==7.0
